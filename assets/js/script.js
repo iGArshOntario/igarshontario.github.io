@@ -1,0 +1,1 @@
+console.log('Strong Spoon site loaded');
