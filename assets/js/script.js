@@ -1,13 +1,20 @@
-// Toggle Theme
-const toggleBtn = document.getElementById("toggleTheme");
-toggleBtn.addEventListener("click", () => {
-  document.body.classList.toggle("dark-mode");
+// Show form when "Guess" button is clicked
+document.getElementById("guessBtn").addEventListener("click", () => {
+  document.getElementById("guessSection").classList.remove("hidden");
+  document.getElementById("guessBtn").style.display = "none";
 });
 
-// Optional: Dummy form feedback
+// Fake submit behavior for now
 const form = document.getElementById("guessForm");
-form.addEventListener("submit", (e) => {
+const msg = document.getElementById("msg");
+
+form.addEventListener("submit", function (e) {
   e.preventDefault();
-  alert("Thanks for your guess! We'll email you if you're right.");
+
+  msg.textContent = "Thank you for your guess! We’ll reach out if you're right.";
   form.reset();
+
+  setTimeout(() => {
+    msg.textContent = "";
+  }, 4000);
 });
