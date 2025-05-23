@@ -5,36 +5,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Strong Spoon</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <img src="assets/logo.png" alt="Strong Spoon Logo" class="logo" />
-    <h1>Introducing Strong Spoon</h1>
-    <p>Fueling the future of healthy living.</p>
-  </header>
+  <div class="container">
+    <!-- Hero Section -->
+    <header>
+      <img src="assets/logo.png" alt="Strong Spoon Logo" class="logo" />
+      <h1>Introducing <span class="brand">Strong Spoon</span></h1>
+      <button id="guessBtn">Guess</button>
+    </header>
 
-  <section class="teaser">
-    <h2>Guess What It Is</h2>
-    <p> Right guess will be rewarded
-      . Take your shot below!</p>
-    <form id="guessForm">
-      <input type="text" placeholder="Your guess..." required />
-      <input type="text" placeholder="Full Name" required />
-      <input type="email" placeholder="Gmail Address" required />
-      <input type="tel" placeholder="Phone Number" required />
-      <input type="text" placeholder="Address (Optional)" />
-      <button type="submit">Submit Guess</button>
-    </form>
-    <p id="responseMessage"></p>
-  </section>
+    <!-- Guess Section -->
+    <section id="guessSection" class="hidden">
+      <form id="guessForm" name="submit-to-google-sheet">
+        <label>Your Guess:</label>
+        <select name="Guess" required>
+          <option value="" disabled selected>Select one</option>
+          <option value="Protein Yogurt">Protein Bar</option>
+          <option value="Supplement">Supplement</option>
+          <option value="Cafe Brand">Cafe Brand</option>
+          <option value="Apparel">Apparel</option>
+          <option value="Other">Other</option>
+        </select>
 
-  
+        <input type="text" name="Name" placeholder="Your Name" required />
+        <input type="email" name="Email" placeholder="Gmail Address" required />
+        <input type="tel" name="Phone" placeholder="Phone Number" required />
+        <input type="text" name="Address" placeholder="Address (optional)" />
 
-  <footer>
-    <p>© 2025 Strong Spoon Corp. | Business No: Pending CRA Confirmation</p>
-    <button id="toggleTheme">Toggle Theme</button>
-  </footer>
+        <button type="submit">Submit Guess</button>
+        <span id="msg"></span>
+      </form>
+    </section>
 
- <script src="script.js"></script>
+    <!-- Contact Section -->
+    <section class="contact">
+      <p>Contact us: <a href="mailto:strongspoon.ca@gmail.com">strongspoon.ca@gmail.com</a></p>
+      <p>Instagram: <a href="https://instagram.com/strongspoon.ca" target="_blank">@strongspoon.ca</a></p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 Strong Spoon Corp. | Built in Canada</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
