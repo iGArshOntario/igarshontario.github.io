@@ -15,12 +15,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Send email
     emailjs.sendForm("service_dkjavmo", "template_ljo2i36", this)
-        .then(() => {
-          alert("Thanks for your guess! We've sent you a confirmation email.");
-          this.reset();
-        }, (error) => {
-          alert("Something went wrong. Please try again later.");
-          console.error(error);
+  .then(() => {
+    alert("Thanks for your guess! We've sent you a confirmation email.");
+    this.reset();
+  }, (error) => {
+    alert("Something went wrong. Please try again later.");
+    console.error(error);
+  });
         });
     });
   }
