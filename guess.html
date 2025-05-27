@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Guess What It Is – Strong Spoon</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+</head>
+<body class="form-page">
+  <div class="form-container">
+    <h1>Guess What Strong Spoon Is</h1>
+    <form id="guess-form">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="text" name="phone" placeholder="Phone Number">
+      <input type="text" name="address" placeholder="Address">
+
+      <p>What do you think it is?</p>
+      <label><input type="checkbox" name="guess" value="Protein Shake"> Protein Shake</label>
+      <label><input type="checkbox" name="guess" value="Fitness Bar"> Fitness Bar</label>
+      <label><input type="checkbox" name="guess" value="Muscle Meal Service"> Muscle Meal Service</label>
+      <label><input type="checkbox" name="guess" value="Vegan Gym Snacks"> Vegan Gym Snacks</label>
+      <label><input type="checkbox" name="guess" value="Bodybuilder Smoothie Kit"> Bodybuilder Smoothie Kit</label>
+      <label><input type="checkbox" name="guess" value="Spooning Service for Gym Bros"> Spooning Service for Gym Bros (funny)</label>
+
+      <textarea name="comment" placeholder="Or suggest your own idea..." rows="4"></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <div class="comments-section">
+      <h2>What People Are Saying</h2>
+      <div id="comment-list"></div>
+    </div>
+  </div>
+</body>
+</html>
