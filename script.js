@@ -1,6 +1,6 @@
 
 (function () {
-  emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+  emailjs.init("uFnTtuTtZNDODOr1B");
 })();
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -8,14 +8,18 @@ document.addEventListener("DOMContentLoaded", () => {
   if (form) {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
-      emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this).then(() => {
-        alert("Submitted successfully! We’ll email you if you're right.");
-        this.reset();
-      }, (error) => {
-        alert("Error submitting. Try again later.");
-        console.error(error);
-      });
+
+      emailjs.sendForm("service_cvizm6r", "template_ljo2i36", this)
+        .then(() => {
+          alert("Thanks for your guess! We've sent you a confirmation email.");
+          this.reset();
+        }, (error) => {
+          alert("Something went wrong. Please try again later.");
+          console.error(error);
+        });
     });
+  }
+});
   }
 
   // Load comments
