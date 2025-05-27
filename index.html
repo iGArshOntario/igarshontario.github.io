@@ -1,9 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Introducing Strong Spoon 
+  <title>Strong Spoon</title>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    // Initialize EmailJS
+    (function() {
+      emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+    })();
+
+    function sendForm(e) {
+      e.preventDefault();
+
+      emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', document.getElementById("guess-form"))
+        .then(() => {
+          alert("Thanks! We've sent you a confirmation email.");
+          document.getElementById("guess-form").reset();
+        }, (error) => {
+          alert("Something went wrong. Try again.");
+          console.log(error);
+        });
+    }
+  </script>
+</head>
+<body>
+  <h1>Introducing Strong Spoon</h1>
+
+  <form id="guess-form" onsubmit="sendForm(event)">
+    <label>Name: <input type="text" name="name" required></label><br><br>
+    <label>Email: <input type="email" name="email" required></label><br><br>
+    <label>Phone: <input type="text" name="phone"></label><br><br>
+
+    <label>Your Guess:</label><br>
+    <label><input type="checkbox" name="guess" value="Coffee Shop"> Coffee Shop</label><br>
+    <label><input type="checkbox" name="guess" value="Active Wear"> Active Wear</label><br>
+    <label><input type="checkbox" name="guess" value="Spoon Made of Steel"> Spoon Made of Steel</label><br>
+    <label><input type="checkbox" name="guess" value="GYM Goer Spoon"> GYM Goer Spoon</label><br>
+    <label><input type="checkbox" name="guess" value="Protein Powder"> Protein Powder</label><br><br>
+
+    <label>Or leave your opinion:</label><br>
+    <textarea name="comment" rows="4" cols="40" placeholder="Write your guess or feedback here..."></textarea><br><br>
+
+    <button type="submit">Submit Guess</button>
+  </form>
+
 
   <footer>
     &copy; 2025 Strong Spoon Corp.
