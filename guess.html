@@ -13,10 +13,15 @@
   <div class="form-container">
     <h1>Guess What Strong Spoon Is</h1>
     <form id="guess-form">
-      <input type="text" name="name" placeholder="Full Name" required>
-      <input type="email" name="email" placeholder="Email Address" required>
-      <input type="text" name="phone" placeholder="Phone Number">
-      <input type="text" name="address" placeholder="Address">
+   <!-- Hidden combined guess input -->
+<input type="hidden" name="guess_combined" id="guess_combined" />
+
+<!-- Name fields already good -->
+<input type="text" name="name" placeholder="Full Name" required>
+<input type="email" name="email" placeholder="Email Address" required>
+
+<!-- Comment already has name -->
+<textarea name="comment" placeholder="Suggest your own idea..." rows="4"></textarea>
 
       <p>What do you think it is?</p>
       <label><input type="checkbox" name="guess" value="Protein Shake"> Protein Shake</label>
