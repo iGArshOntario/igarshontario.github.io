@@ -2,57 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Strong Spoon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inspired Store</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    <!-- Hero Section -->
-    <header>
-      <img src="assets/logo.png" alt="Strong Spoon Logo" class="logo" />
-      <h1>Introducing <span class="brand">Strong Spoon</span></h1>
-      <button id="guessBtn">Guess</button>
-    </header>
+  <nav>
+    <div class="logo">Strong Spoon</div>
+    <ul>
+      <li><a href="#">Store</a></li>
+      <li><a href="#">Discover</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+  </nav>
 
-    <!-- Guess Section -->
-    <section id="guessSection" class="hidden">
-      <form id="guessForm" name="submit-to-google-sheet">
-        <label>Your Guess:</label>
-        <select name="Guess" required>
-          <option value="" disabled selected>Select one</option>
-          <option value="Protein Yogurt">Protein Bar</option>
-          <option value="Supplement">Supplement</option>
-          <option value="Cafe Brand">Cafe Brand</option>
-          <option value="Apparel">Apparel</option>
-          <option value="Other">Other</option>
-        </select>
+  <section class="hero">
+    <h1>Your next health obsession.</h1>
+    <p>Strong Spoon is coming soon. Guess what it is and get early access.</p>
+    <a href="#" class="cta">Guess Now</a>
+  </section>
 
-        <input type="text" name="Name" placeholder="Your Name" required />
-        <input type="email" name="Email" placeholder="Gmail Address" required />
-        <input type="tel" name="Phone" placeholder="Phone Number" required />
-        <input type="text" name="Address" placeholder="Address (optional)" />
+  <section class="features">
+    <div class="feature-box">
+      <h2>Premium Quality</h2>
+      <p>Crafted with precision. Tastes like magic.</p>
+    </div>
+    <div class="feature-box">
+      <h2>Designed to Fuel</h2>
+      <p>Protein meets taste. No compromise.</p>
+    </div>
+    <div class="feature-box">
+      <h2>Pre-Order Perks</h2>
+      <p>Guess correctly & unlock exclusive rewards.</p>
+    </div>
+  </section>
 
-        <button type="submit">Submit Guess</button>
-        <span id="msg"></span>
-      </form>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact">
-      <p>Contact us: <a href="mailto:strongspoon.ca@gmail.com">strongspoon.ca@gmail.com</a></p>
-      <p>Instagram: <a href="https://instagram.com/strongspoon.ca" target="_blank">@strongspoon.ca</a></p>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-      <p>© 2025 Strong Spoon Corp. | Built in Canada</p>
-    </footer>
-  </div>
-
-  <script src="script.js"></script>
+  <footer>
+    &copy; 2025 Strong Spoon Inc.
+  </footer>
 </body>
 </html>
