@@ -2,30 +2,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>FAQs - Strong Spoon</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strong Spoon - Guess to Win</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      background: linear-gradient(135deg, #ececec, #ffffff);
+      color: #111;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin-top: 40px;
+      font-weight: 500;
+    }
+
+    .guess-section {
+      padding: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .glass-box {
+      background: rgba(255, 255, 255, 0.7);
+      border-radius: 20px;
+      padding: 30px;
+      max-width: 400px;
+      width: 90%;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .glass-box h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .subtext {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .glow-button {
+      display: inline-block;
+      padding: 12px 30px;
+      font-size: 16px;
+      color: white;
+      background: linear-gradient(to right, #111, #333);
+      border: none;
+      border-radius: 50px;
+      text-decoration: none;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
+
+    .glow-button:hover {
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+      transform: scale(1.05);
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Frequently Asked Questions</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="shop.html">Shop</a>
-      <a href="faq.html">FAQ</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
-  <main>
-    <section>
-      <h2>Got Questions?</h2>
-      <p><strong>Q: Is your yogurt high in protein?</strong><br>A: Yes! Each cup has 15–20g of high-quality protein.</p>
-      <p><strong>Q: Is it suitable for post-workout?</strong><br>A: Absolutely. Strong Spoon is designed to fuel your recovery.</p>
-      <p><strong>Q: Where do you deliver?</strong><br>A: Currently across Canada. Global shipping coming soon!</p>
-    </section>
-  </main>
+
+  <h1>Guess it Right &gt; Get in Early &gt; Get Rewarded</h1>
+
+  <section class="guess-section" id="guess-form">
+    <div class="glass-box">
+      <h2>Think you know what it is?</h2>
+      <p class="subtext">Drop your guess below — rewards await the right ones.</p>
+
+      <!-- You can add your form or link here -->
+      <a href="form.html" class="glow-button">Submit Your Guess</a>
+    </div>
+  </section>
+
   <footer>
     <p>&copy; 2025 Strong Spoon. All rights reserved.</p>
   </footer>
