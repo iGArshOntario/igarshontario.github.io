@@ -1,47 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Guess What It Is – Strong Spoon</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guess to Unlock</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      font-family: 'Helvetica Neue', sans-serif;
+      color: #111;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      font-weight: 400;
+      font-size: 1.2rem;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .glow-button {
+      display: inline-block;
+      padding: 12px 30px;
+      font-size: 16px;
+      color: #fff;
+      background: linear-gradient(90deg, #000, #333);
+      border: none;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      transition: all 0.3s ease;
+    }
+
+    .glow-button:hover {
+      box-shadow: 0 0 20px rgba(0,0,0,0.6);
+      transform: scale(1.05);
+    }
+  </style>
 </head>
-<body class="form-page">
-  <div class="form-container">
-    <h1>Guess What Strong Spoon Is</h1>
-    
-    <form id="guess-form">
-      
-      <!-- Hidden field for combined guesses -->
-      <input type="hidden" name="guess_combined" id="guess_combined" />
+<body>
 
-      <!-- User Details -->
-      <input type="text" name="name" placeholder="Full Name" required />
-      <input type="email" name="email" placeholder="Email Address" required />
-      <input type="text" name="phone" placeholder="Phone Number" />
-      <input type="text" name="address" placeholder="Address" />
+  <h1>Oops! You're not ready yet.</h1>
+  <h3>But your guess might get you there.</h3>
 
-      <!-- Comment -->
-      <textarea name="comment" placeholder="Suggest your own idea..." rows="4"></textarea>
+  <a href="form.html" class="glow-button">Guess & Win</a>
 
-      <!-- Guess Options -->
-      <p>What do you think it is?</p>
-      <label><input type="checkbox" name="guess" value="Protein Shake" /> Protein Shake</label><br>
-      <label><input type="checkbox" name="guess" value="Fitness Bar" /> Fitness Bar</label><br>
-      <label><input type="checkbox" name="guess" value="Muscle Meal Service" /> Muscle Meal Service</label><br>
-      <label><input type="checkbox" name="guess" value="Vegan Gym Snacks" /> Vegan Gym Snacks</label><br>
-      <label><input type="checkbox" name="guess" value="Bodybuilder Smoothie Kit" /> Bodybuilder Smoothie Kit</label><br>
-      <label><input type="checkbox" name="guess" value="Spooning Service for Gym Bros" /> Spooning Service for Gym Bros</label><br>
-
-      <button type="submit">Submit</button>
-    </form>
-
-    <div class="comments-section">
-      <h2>What People Are Saying</h2>
-      <div id="comment-list"></div>
-    </div>
-  </div>
 </body>
 </html>
