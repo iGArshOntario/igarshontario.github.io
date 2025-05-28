@@ -3,16 +3,38 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Strong Spoon</title>
   <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
 </head>
-<body class="intro-page">
-  <div class="hero">
-    <img src="assets/IMG_3482.jpeg" alt="Strong Spoon Logo" class="logo">
-    <h1>Introducing Strong Spoon</h1>
-    <a href="guess.html" class="glow-button">Guess & Win</a>
+<body>
+  <div class="container">
+    <h1 class="mystery">"The strongest things are hidden in plain sight."</h1>
+    <p class="subtext">Can you guess what Strong Spoon really is?</p>
+
+    <div class="terminal">
+      <p>&gt; access attempt: <span class="loading">unauthorized</span></p>
+      <p>&gt; decryption sequence: <span class="decrypt">███▓▓▒▒░░░░░░░░░░</span></p>
+      <p>&gt; product type: <span class="classified">classified</span></p>
+      <p>&gt; hint: it's not just a spoon</p>
+      <p>&gt; user access: pending… <strong><a href="#guess-section">guess to unlock</a></strong></p>
+    </div>
+
+    <div class="glass-box" id="guess-section">
+      <h2>You’re not ready yet... but your guess might get you there.</h2>
+      <form action="https://formspree.io/f/xknlkzgg" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Email Address" required />
+        <input type="tel" name="phone" placeholder="Phone Number" required />
+        <textarea name="guess" rows="3" placeholder="What's your guess? Be bold. Be weird." required></textarea>
+        <button type="submit">Submit Guess</button>
+      </form>
+    </div>
+
+    <footer>
+      <p>Follow us on <a href="https://instagram.com/strongspoon.ca" target="_blank">@strongspoon.ca</a></p>
+      <p>Contact: <a href="mailto:strongspoon.ca@gmail.com">strongspoon.ca@gmail.com</a></p>
+    </footer>
   </div>
 </body>
 </html>
